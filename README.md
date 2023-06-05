@@ -25,3 +25,6 @@ Step5: Construct WSI-Graph by running
 
 Step6: Training the Graph Neural Network by running
    ```python main.py```
+
+## License
+The source code of SlideGraph<sup>∞</sup> is released under MIT-CC-Non-Commercial license.
