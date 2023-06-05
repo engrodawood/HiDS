@@ -5,3 +5,23 @@ Personalized drug sensitivity and treatment prediction models using histological
 
 ## Workflow
 ![workflow_github](https://github.com/engrodawood/Hist-DS/assets/13537509/6e6cbdeb-4e30-438e-b52e-f26d2152cc28)
+
+## Training and Evaluation
+
+Workspace directory contain necessary script for constructing graph and training the proposed SlideGraph<sup>∞</sup>. 
+
+Step1: Download TCGA BRCA Diagnostic slides from <a href='https://docs.gdc.cancer.gov/Data_Portal/Users_Guide/Repository/'>GCD data portal</a>
+
+Step2: Download tissue segmentation mask from this <a href = "https://drive.google.com/file/d/1nvGyMm33gl-iYlVEziM_RjpL1c61ApXv/view?usp=sharing"> Link</a>.
+
+Step3: Generate patches of each Whole slide image by running
+  ```python patches_extraction.py```
+
+Step4: Extract ShuffleNet representation from each of the WSI patch by running
+   ```python deep_features.py```
+
+Step5: Construct WSI-Graph by running
+   ```python graph_construction.py```
+
+Step6: Training the Graph Neural Network by running
+   ```python main.py```
